@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <p><h3>Click on buttons to change the grid view</h3></p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1508196476590-9511757a5cbf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1501344358163-f2a7de7a55a6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/taj-mahal-agra-india-picture-id486312253?k=6&m=486312253&s=612x612&w=0&h=xPj2NacXdRGukoT7NJELoLs3t6kaMZO02E8HnANi2XE=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/the-taj-mahal-mausoleum-marble-tomb-caskets-of-shah-jahan-and-mumtaz-picture-id134642117?k=6&m=134642117&s=612x612&w=0&h=v7sXsZR-1A3jLX9ywxNIgHECbo1wK5L6xaCjBMq2LnY=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/india-uttar-pradesh-agra-taj-mahal-mumtaz-mahals-cenotaph-next-to-picture-idsb10066387c-001?k=6&m=sb10066387c-001&s=612x612&w=0&h=jFrh-fL_rKaNxYpHMUzcXkkQMINf-ghBDeDAzqjoUsk=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/carvings-on-the-marble-wall-taj-mahal-picture-id144454378?k=6&m=144454378&s=612x612&w=0&h=cTHrwi6rXwZWiF4l52Gm-WECetHljeST8WInYOzQJjY=" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1577123050881-7aebf2221d58?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1524473994769-c1bbbf30e944?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1578909516849-bced8d0ef3e0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1523980077198-60824a7b2148?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1544622428-56b8d9eed7db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1580100171216-f3be953c3c64?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1508196476590-9511757a5cbf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1501344358163-f2a7de7a55a6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/taj-mahal-agra-india-picture-id486312253?k=6&m=486312253&s=612x612&w=0&h=xPj2NacXdRGukoT7NJELoLs3t6kaMZO02E8HnANi2XE=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/the-taj-mahal-mausoleum-marble-tomb-caskets-of-shah-jahan-and-mumtaz-picture-id134642117?k=6&m=134642117&s=612x612&w=0&h=v7sXsZR-1A3jLX9ywxNIgHECbo1wK5L6xaCjBMq2LnY=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/india-uttar-pradesh-agra-taj-mahal-mumtaz-mahals-cenotaph-next-to-picture-idsb10066387c-001?k=6&m=sb10066387c-001&s=612x612&w=0&h=jFrh-fL_rKaNxYpHMUzcXkkQMINf-ghBDeDAzqjoUsk=" style="width:100%">
+    <img src="https://media.gettyimages.com/photos/carvings-on-the-marble-wall-taj-mahal-picture-id144454378?k=6&m=144454378&s=612x612&w=0&h=cTHrwi6rXwZWiF4l52Gm-WECetHljeST8WInYOzQJjY=" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1577123050881-7aebf2221d58?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1524473994769-c1bbbf30e944?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1578909516849-bced8d0ef3e0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1526711657229-e7e080ed7aa1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8dGFqJTIwbWFoYWwlMjBhZ3JhJTIwaW5kaWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1523980077198-60824a7b2148?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1544622428-56b8d9eed7db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+    <img src="https://images.unsplash.com/photo-1580100171216-f3be953c3c64?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHRhaiUyMG1haGFsJTIwYWdyYSUyMGluZGlhfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
